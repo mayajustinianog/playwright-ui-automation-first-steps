@@ -12,7 +12,7 @@ export class LoginPage {
         this.passwordInput = page.getByPlaceholder('Password');
         this.loginButton = page.getByRole('button', { name: 'Login' });
     }
-    async login(username: string, password: string) {
+    async login(username: string, password: string) { //metodo async porque espera algo y utiliza await para esperar a que se complete la accion
         await this.usernameInput.fill(username);
         await this.passwordInput.fill(password);
         await this.loginButton.click();
